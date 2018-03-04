@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <title>Train Schedule</title>
+    <!-- bootstrap-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+    <!--jquery-->
+    <!-- jQuery -->
+     <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+     <!-- Firebase Reference -->
+    <script src="https://www.gstatic.com/firebasejs/4.10.1/firebase.js"></script>
+    <!-- Moment.js Reference -->
+    <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
+    <!--CSS-->
+    <link rel="stylesheet" href="assets/css/style.css">
+
+  </head>
+
+  <body>
+    <!-- creates the jumbotron -->
+    <div class="container">
+      <div class="jumbotron" style="background-color: #428bca; color: yellow">
+        <h1 class="big">Super Hero Train Schedule</h1><br>
+        <h1 id="currentTime"></h1>
+      </div>
+
+
+      <!--creates the table for current trains-->
+      <div class="card">
+        <div class="card-heading">
+          <div class="card-header" style="background-color: #428bca; color: yellow">
+            <h4>Current Train Schedule </h4>
+          </div>
+        </div>
+        <div class="card-body">
+          <table class="table" id="table">
+            <thead>
+              <tr>
+                <th>Train Name</th>
+                <th>Destination</th>
+                <th>Frequency (min)</th>
+                <th>Next Arrival</th>
+                <th>Minutes Away</th>
+              </tr>
+            </thead>
+            <tbody>
+
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <br>
+      <br>
+
+      <!-- creates heading for the form -->
+      <div class="card">
+        <div class="card-heading">
+          <div class="card-header" style="background-color: #428bca; color: yellow">
+            <h4>Add Train</h4>
+          </div>
+        </div>
+
+        <!-- creates the form -->
+        <div class="card-block">
+          <form>
+            <div class="form-group row">
+              <label>Train Name</label><br>
+              <input type="text" id="trainNameInput" class="form-control">
+            </div>
+
+            <div class="form-group row">
+              <label>Destination</label><br>
+              <input type="text" id="destinationInput" class="form-control">
+            </div>
+
+            <div class="form-group row">
+              <label>First Train Time (HH:mm military time)</label><br>
+              <input type="text" id="startInput" class="form-control">
+            </div>
+
+            <div class="form-group row">
+              <label>Frequency (min)</label><br>
+              <input type="number" id="frequencyInput" class="form-control">
+            </div>
+
+            <button type=submit id="add-train-btn" class="btn btn-primary" style="color: yellow">Submit</button>
+          </form>
+        </div>
+      </div>
+    </div>
+    <!--link to my javascript file-->
+    <script src="assets/javascript/logic.js"></script>
+  </body>
+  <!--Train names: Colossal Choo Choo, Time Traveler, Shadow Train, Flying Express, Spider Subway, Marvelous Mono-rail, Loki Locomotive, Bionic Zephyr-->
+
+</html>
